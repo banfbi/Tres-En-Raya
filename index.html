@@ -1,0 +1,46 @@
+<!--=======================================================-->
+<!-- Copyright (c) 2024. Alejandro Alberto Jiménez Brundin -->
+<!--=======================================================-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 en Raya</title>
+    <link rel="icon" type="image/png" href="assets/Img/Ico.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <button class="button" id="titulo" data-text="Awesome"
+        onclick="reiniciar()">
+        <span class="actual-text">&nbsp;Tres|En|Raya&nbsp;</span>
+        <span aria-hidden="true" class="hover-text">&nbsp;Tres|En|Raya&nbsp;</span>
+      </button>
+      <p class="hecho">Hecho por: Alejandro Alberto Jiménez Brundin</p> <div
+        id="game" class="board">
+        <div class="row">
+          <button class="cell" onclick="placeMarker(0, 0)"></button>
+          <button class="cell" onclick="placeMarker(0, 1)"></button>
+          <button class="cell" onclick="placeMarker(0, 2)"></button>
+        </div>
+        <div class="row">
+          <button class="cell" onclick="placeMarker(1, 0)"></button>
+          <button class="cell" onclick="placeMarker(1, 1)"></button>
+          <button class="cell" onclick="placeMarker(1, 2)"></button>
+        </div>
+        <div class="row">
+          <button class="cell" onclick="placeMarker(2, 0)"></button>
+          <button class="cell" onclick="placeMarker(2, 1)"></button>
+          <button class="cell" onclick="placeMarker(2, 2)"></button>
+        </div>
+      </div>
+      <div id="status" class="status">Turno del jugador: [X]</div>
+      <button class="reset-btn" onclick="resetGame()">Reiniciar Juego</button>
+    </div>
+    <script src="assets/javascript/script.js"></script>
+  </body>
+</html>
+<!--=======================================================-->
+<!-- Copyright (c) 2024. Alejandro Alberto Jiménez Brundin -->
+<!--=======================================================-->

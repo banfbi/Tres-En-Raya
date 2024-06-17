@@ -1,0 +1,129 @@
+/*=======================================================
+Copyright (c) 2024. Alejandro Alberto Jiménez Brundin
+=======================================================*/
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  background-image: url("../Img/wallpaper.webp");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#titulo {
+  align-items: center;
+  margin: 0;
+  justify-content: center;
+  margin-top: 25px;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  --border-right: 6px;
+  --text-stroke-color: rgba(161, 161, 161, 0.6);
+  --animation-color: #37ff8b;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
+}
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.board {
+  margin-top: 120px;
+  display: inline-block;
+  border: 10px solid #1a1a1a;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  font-size: 36px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: 2px solid #1a1a1a;
+}
+
+.cell:hover {
+  background-color: #f0f0f0;
+}
+
+.status {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.reset-btn {
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reset-btn:hover {
+  background-color: #45a049;
+}
+
+.winner-cell {
+  background-color: #4caf50;
+  color: white;
+}
+
+.tie .cell::after {
+  content: "Empate";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #f44336;
+}
+/*=======================================================
+Copyright (c) 2024. Alejandro Alberto Jiménez Brundin
+=======================================================*/
